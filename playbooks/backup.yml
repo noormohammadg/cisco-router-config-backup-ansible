@@ -1,0 +1,12 @@
+# This the entry point of the backup project
+# It tells ansible which hosts to target and which role to execute
+---
+- name: cisco Router configuration backup
+  hosts: cisco_routers
+  gather_facts: false
+
+  vars:
+    backup_timestamp: "{{ lookup('pipe','date +%Y%m%d_%H%M%S')}}"
+
+  roles:
+    - cisco_backup

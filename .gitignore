@@ -1,0 +1,16 @@
+# Router Configuration backups
+backups/
+
+# Real Ansible vault credentials
+inventory/group_vars/cisco_routers/vault.yml
+
+# Vault password files
+.vault_pass
+vault_password.txt
+
+# Ansible temporary files
+*.retry
+
+# Python cache
+__pycache__/
+*.pyc

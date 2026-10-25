@@ -1,0 +1,16 @@
+# Contains the actual tasks that create and save backups.
+---
+- name: Create Backup backup_directory
+  ansible.builtin.file:
+    path: "{{ backup_directory }}"
+    state: directory
+    mode: "0755"
+  delegate_to: localhost
+  run_once: true
+
+- name: Backup cisco router running configuration
+  cisco.ios.ios_config:
+    backup: true
+    backup_options:
+      dir_path: "{{ backup_directory }}"
+      filename: "{{ backup_filename_prefix}}_{{ backup_timestamp }}_{{ backup_filename_prefix }}"

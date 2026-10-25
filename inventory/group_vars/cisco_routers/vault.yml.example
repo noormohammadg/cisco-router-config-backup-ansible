@@ -1,0 +1,3 @@
+---
+vault_ansible_user: "REPLACE_WITH_ROUTER_USERNAME"
+vault_ansible_password: "REPLACE_WITH_ROUTER_SSh_PASSWORD"

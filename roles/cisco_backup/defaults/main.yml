@@ -1,0 +1,4 @@
+# Provides default values for variables used by the role
+---
+backup_filename_prefix: "{{ inventory_hostname }}"
+backup_file_extension: ".cfg"
