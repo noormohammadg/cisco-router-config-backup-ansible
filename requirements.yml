@@ -1,1 +1,6 @@
 # Declares the ansible collections the project requres
+---
+collections:
+  - name: ansible.netcommon
+
+  - name: cisco.ios
